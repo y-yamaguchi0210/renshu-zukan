@@ -1,5 +1,5 @@
 // 電波がなくても開けるように、アプリ本体とフォントを端末に保存する
-const CACHE='renshu-zukan-vc60c423e4d';
+const CACHE='renshu-zukan-v2-volleyball-icon';
 const FILES=['./','index.html','manifest.json','icon-192.png','icon-512.png','apple-touch-icon.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(n=>n!==CACHE).map(n=>caches.delete(n)))).then(()=>self.clients.claim()))});
