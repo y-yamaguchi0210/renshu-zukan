@@ -345,7 +345,7 @@ function renderDetail(d){
 function stepsHtml(d){
  return '<ol class="steps">'+d.how.map(function(h){return '<li>'+esc(h)+'</li>'}).join('')+'</ol>'+
  '<dl class="adj"><div><dt>やさしく</dt><dd>'+esc(d.easy)+'</dd></div><div><dt>むずかしく</dt><dd>'+esc(d.hard)+'</dd></div></dl>'+
- '<p class="line fun"><b>楽しく</b>'+esc(d.fun)+'</p><p class="line vb"><b>バレーへ</b>'+esc(d.vb)+'</p>'+(d.safe?'<p class="line safe"><b>安全</b>'+esc(d.safe)+'</p>':'');
+ '<p class="line fun"><b>楽しく</b>'+esc(d.fun)+'</p><p class="line vb"><b>効果</b>'+esc(d.vb)+'</p>'+(d.safe?'<p class="line safe"><b>安全</b>'+esc(d.safe)+'</p>':'');
 }
 function markDetail(d){
  $('[data-add2]').textContent=inPlan(d.t)?'✓ メニューから外す':'+ メニューに入れる';
